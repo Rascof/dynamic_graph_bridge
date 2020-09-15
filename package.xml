@@ -1,4 +1,5 @@
-<package format="2">
+<?xml version="1.0"?>
+<package format="3">
   <name>dynamic_graph_bridge</name>
   <version>3.3.3</version>
   <description>
@@ -47,5 +48,19 @@
   <exec_depend>sot-core</exec_depend>
   <exec_depend>sot-dynamic-pinocchio</exec_depend>
   <exec_depend>dynamic_graph_bridge_msgs</exec_depend>
+  <build_depend>git</build_depend>
+  <build_depend>doxygen</build_depend>
+  <!-- The following tags are recommended by REP-136 -->
+  <exec_depend condition="$ROS_VERSION == 1">catkin</exec_depend>
+  <exec_depend condition="$ROS_VERSION == 2">ament_cmake</exec_depend>
+  <depend>boost</depend>
+
+  <doc_depend>doxygen</doc_depend>
+
+  <buildtool_depend>cmake</buildtool_depend>
+
+  <export>
+    <build_type>cmake</build_type>
+  </export>
 
 </package>
